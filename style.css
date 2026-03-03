@@ -1,0 +1,336 @@
+
+p {
+    font-size: 30px;
+    color:black;
+
+ }
+/*#important 
+ {
+ font-size: 30px;
+    font-style: oblique;
+   color:rgb(160, 11, 11);
+}
+*/
+
+/* navigation styles using css in the top of the webiste */
+
+
+nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 10px 0; /* for left - right & top - bottom*/
+   z-index: 10; /* is to place the items behind it or specificy the amount of content it can overlap*/
+   background-color: rgba(50, 50, 60, 0.95); /*to define the box color and the transperency of content we can see*/
+   box-shadow:0px 2px 10px rgba(0, 0, 0, 0.52); /*create shadow for the element and define the position of the shadow */
+}
+
+nav ul { /*using the parent nav associated with the child ul so changes only happens to this ul */
+   list-style: none;
+   padding: 0;
+   margin:0;
+   display:flex;
+   justify-content: center;/* adust the navigation content into the center and display is kind of a float function that need to be "flex"*/
+   align-items: center;
+
+}
+
+nav li {
+   margin: 0px 15px; /* is to space the navigation links in 2 aixs top-bottom & left- right*/
+}
+   
+nav a {
+   font-family: 'Times New Roman', Times, serif ;
+   font-size: 16px;
+   color:white;
+   text-decoration: none;
+   transition : color 0.3s, border-bottom 0.3s; /* we are defining the transition effect when we click on the navigation link or when we pass through the link it change color and gives the under line effect for the link as well*/
+   padding-bottom: 5px;
+   position:relative;
+}
+nav a:hover { /* "hover" used to apply that transition effect on the links & its also a 'pesudo class(:)'*/ /*this pesudo class will traget the existing element*/
+   color: #1b1b1b20;
+   border-bottom: 2px double white;
+
+}
+
+/* applying section CSS - to create a text in the box and customize it*/
+body{
+   background-color: #1C1C25;/* create background color to the entire body */
+   font-family: 'Times New Roman', Times, serif ;
+}
+h2{
+   font-size: 1.4rem;
+   color: #e6e6e6;
+}
+.in-box{
+   background-color:  rgba(159, 159, 173, 0.05);
+   border-radius: 10px; /* add radius to the background */
+   padding: 20px;
+   margin: 80px auto;/* to push the section part from navigation from the top and auto will align it in the center */
+   max-width: 800px; /* to define the backgrounds maximum width */
+   box-shadow: 0px/* shift right */ 2px/* shift down */ 16px/* blur */ 10px/* spread */ rgba(255,54,112,0.85);/* mention the position of shadow & color of the shadow */
+   
+}
+.in-box h2 {/* its like parent-child relation where just the 'h2' is been edited without effecting the 'in-box' section*/
+   font-size: 24;
+   font-family:  "Racing Sans One", sans-serif; /* 'racing sans one' is been imported from the web this how you use it in css*/
+   color: #e6e6e6;
+   margin-bottom: 30px;/* is used to mention the amount movement of the section from the border bottom*/
+   border-bottom: 2px solid #e6e6e6;/* add border just at the bottom, its solid and its 2px thk */
+   display:inline-block;/* Inline block will display the 'border' upto the 'h2' lenght*/
+   padding-bottom: 10px;/* is used specify the position of border under the heading */
+}
+.in-box p{
+   font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #e6e6e6;
+   line-height: 1.6;/* spacing of the lines in the paragraph  */
+   text-align: justify; /* is to align the text */
+}
+/*header Section of the page*/
+.header-full{
+   display:flex;/*its css tool that will optimize the display of the website in different platform*/
+   flex-direction: column; /*is to stack the two nested div in vertical position*/
+   height:100vh;/*we use'vh'-veiw port height instead of 'px' unit to relative position the items*/
+   width:100vw;/*we use'vw'-veiw port width instead of 'px' unit to relative position the items*/
+   justify-content: center; 
+   text-align: center;
+   padding: 2em;
+   padding-bottom:90;/*padding to this section is ineffective*/
+   background-image: url(max-verstappen-red-bull-racing.jpg);/*is the way to add image in the website through 'css' and using the url of img either absolue or relative*/
+   background-size:cover;/*is to strech the img to the entire view port*/
+   background-position: center center;/*is to position the img*/
+   background-repeat: no-repeat;/*to avoide repeating the img in the view port*/
+   position: relative;
+}
+.header-main h1{
+   color: white;
+}
+.header-full::before{/*(::) it is the 'pesudo element' will traget the existing 'part' of the element*//*were 'before' is used to create a 'overlay' btw the text and the img for better text visibity*/
+   content: "";/*The 'content' property is used in conjunction with the '::before and ::after pseudo-elements' to insert decorative or structural content into a document without modifying the underlying HTML structure*/
+   position:absolute;/*is to this speicify the overlay position of the bg within the 'content'*/
+   top:0;
+   bottom:0;
+   left:0;
+   right:0;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 0;
+}
+.header-main, .header-button{
+   z-index: 2;/*is to project the wording over the overlay bg and img in 3rd axis to make the content visible*/
+}
+/*header Section-Button*/
+.header-button{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 15px;
+   border:2px solid rgba(0, 0, 0, 0.5)
+}
+/*footer Section*/
+.foot-link{
+    list-style: none;
+   padding: 0;
+   margin:0;
+   display:flex;
+   justify-content: center;/* adust the navigation content into the center and display is kind of a float function that need to be "flex"*/
+   align-items: center;
+
+}
+.foot-link li{
+    margin: 0px 15px; /* is to space the navigation links btw the links in 2 aixs top-bottom & left- right*/
+
+}
+.foot-link a{
+    font-family: 'Times New Roman', Times, serif ;
+   font-size: 16px;
+   color:white;
+   text-decoration: none;
+
+}
+.foot p{
+   font-family: 'Times New Roman', Times, serif ;
+   font-size: 16px;
+   color:white;
+   padding-top: 30px;
+   justify-content: center;/* adust the navigation content into the center and display is kind of a float function that need to be "flex"*/
+   text-align: center;
+}
+footer{
+   background-color: #111111;/* create background color to the entire body */
+   padding-bottom: 15px;
+   align-items: center;
+   position:relative;
+}
+.links a {/* to set the color and size of the social media icons */
+   color: white;
+   margin: 0 15px;
+   font-size: 20px;
+  
+   
+}
+.links a:hover{/* to create hover effect for the social media links */
+   color: blue;
+   transition: color 0.3s;
+   
+}
+
+/* to create Gallery page */
+.gallery-sec{
+   margin-top:50px;
+}
+
+.gallery{
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;/* creates three equally sized columns that divide the available space in the container, with each column taking up one "fraction" (1fr) of the total space*/
+   width:75vw;/* width of the overall viewport in a column */
+   margin: 20px auto;/* for top and bottom 20px margin & for left and right is auto */
+}
+
+figure{
+   margin:10px;
+   padding:0px;
+   position: relative;/*its importent to keep the postion 'relative' so that the image comes out good */
+
+}
+
+figure img{
+   width:100% /*is used to align the img equi spaced and aligned properly into these column */
+}
+
+.gallery img{
+   padding:0px;
+   position: relative;
+   width:100%;
+   box-sizing:border-box;
+   border:3px solid white;
+}
+figcaption{/*we can do much more customization to this using the css but its enough for now */
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+   color: white;
+   text-align: center;
+   
+
+
+}
+
+@media screen and (max-width:600px){/*a cornerstone technology of responsive web design that allow you to conditionally 
+                                     apply CSS styles based on the characteristics of the user's device or browsing environment 
+                                     and 'max-width of the device is 600px so it acts like contionaly statement where if it is less 
+                                     than 600px it change the img into single column and change the figcaption font size to smaller*/
+   figcaption{
+      font-size: 5px;
+   }
+   .gallery{
+      grid-template-columns: 1fr;
+      width:90vw;
+   }
+}
+/*Table content */
+table{
+   width:80%;
+   border-collapse: collapse;
+   align-items: center;
+   
+}
+table td {
+   padding: 10px;
+   border:1px solid white;
+
+}
+/*css for the about us page */
+.two-column{
+   display: flex;
+   justify-content: space-between;/*to align two different section content side by side */
+   margin: 80px auto;
+
+}
+.column img {
+   flex-basis:40%;
+   width:100%;
+   height: auto;
+   padding-left: 90px;     
+   margin-left: 40px;
+}
+
+.about-sec{
+   background-color: rgba(73, 73, 97, 0.05);
+   padding: 20px;
+   margin:80px 40px;
+   max-width: 800px;
+}
+.about-sec h2{
+    font-size: 24;
+   font-family:  "Racing Sans One", sans-serif; /* 'racing sans one' is been imported from the web this how you use it in css*/
+   color: #e6e6e6;
+   margin-bottom: 30px;/* is used to mention the amount movement of the section from the border bottom*/
+   border-bottom: 2px solid #e6e6e6;/* add border just at the bottom, its solid and its 2px thk */
+   display:inline-block;/* Inline block will display the 'border' upto the 'h2' lenght*/
+   padding-bottom: 10px;/* is used specify the position of border under the heading */
+}
+.about-sec p{
+   font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #e6e6e6;
+   line-height: 1.6;/* spacing of the lines in the paragraph  */
+   text-align: justify; /* is to align the text */
+}
+.donate{
+   background-color: rgba(75, 75, 235, 0.05);
+   text-align: center;
+   padding:50px 20px;
+}
+/* for the button graphics */
+.but {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+.but:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: white;
+}
+
+/* tour package selection*/
+.overall-pack{
+   margin: 40px;
+   margin-left:500px;
+   
+}
+.pack-1, .pack-2, .pack-3{
+   background-color: rgba(75, 75, 235, 0.05);
+   padding: 20px;
+   width: 800px;
+   height:auto;
+  justify-content: center ;
+
+}
+ .overall-pack h2{
+   font-size: 24;
+   font-family:  "Racing Sans One", sans-serif; /* 'racing sans one' is been imported from the web this how you use it in css*/
+   color: #e6e6e6;
+   margin-bottom: 30px;/* is used to mention the amount movement of the section from the border bottom*/
+   border-bottom: 2px solid #e6e6e6;/* add border just at the bottom, its solid and its 2px thk */
+   display:inline-block;/* Inline block will display the 'border' upto the 'h2' lenght*/
+   padding-bottom: 10px;/* is used specify the position of border under the heading */
+ }
+ .overall-pack p{
+   font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #e6e6e6;
+   line-height: 1.6;/* spacing of the lines in the paragraph  */
+   text-align: justify; /* is to align the text */
+ }
+ .button{
+   text-align: right;
+ }
